@@ -1,0 +1,105 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-size: 1.6rem;
+    /* font-family: "Sen", sans-serif; */
+    font-family: "Poppins", sans-serif;
+}
+
+/*! COMMON */
+.sen {
+    font-family: "Sen", sans-serif;
+}
+
+.content {
+    min-width: 1170px;
+    max-width: calc(100% - 48px);
+    margin-left: auto;
+    margin-right: auto;
+}
+
+:root {
+    --bg-color: #fffcf4;
+    --primary-color: #ffb900;
+    --text-normal: #5f5b53;
+    --text-bold: #171100;
+}
+
+.btn {
+    text-align: center;
+    font-weight: 600;
+    background-color: var(--text-bold);
+}
+
+/*! HERO */
+#header {
+    height: 100vh;
+    background: var(--bg-color);
+}
+
+.header-wrap {
+}
+
+/*! COURSES */
+#courses {
+    height: 645px;
+    margin-top: 200px;
+    margin-bottom: 200px;
+    background: green;
+}
+
+.courses-wrap {
+}
+
+/*! TESTI */
+#testi {
+    height: 380px;
+    background: orange;
+}
+
+.testi-wrap {
+}
+
+/*! FEATURES */
+#features {
+    height: 438px;
+    background: #777;
+}
+
+.features-wrap {
+}
+
+/*! CTA */
+#cta {
+    height: 440px;
+    margin-top: 200px;
+    margin-bottom: 200px;
+    background: #999;
+}
+
+.cta-wrap {
+}
+
+/*! BLOG */
+#blog {
+    height: 878px;
+    background: #ccc;
+}
+
+.blog-wrap {
+}
+
+/*! FOOTER */
+#footer {
+    height: 428px;
+    background: #666;
+}
+
+.footer-wrap {
+}

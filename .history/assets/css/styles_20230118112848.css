@@ -1,0 +1,68 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-size: 1.6rem;
+    /* font-family: "Sen", sans-serif; */
+    font-family: "Poppins", sans-serif;
+}
+
+/*! COMMON */
+.sen {
+    font-family: "Sen", sans-serif;
+}
+
+.content {
+    min-width: 1170px;
+    max-width: 100% - 48px;
+}
+
+/*! HERO */
+.hero {
+    height: 100vh;
+    color: red;
+}
+
+.hero-wrap {
+}
+
+.courses {
+}
+
+.courses-wrap {
+}
+
+.testi {
+}
+
+.testi-wrap {
+}
+
+.features {
+}
+
+.features-wrap {
+}
+
+.cta {
+}
+
+.cta-wrap {
+}
+
+.blog {
+}
+
+.blog-wrap {
+}
+
+.footer {
+}
+
+.footer-wrap {
+}

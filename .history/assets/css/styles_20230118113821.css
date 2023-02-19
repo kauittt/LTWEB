@@ -1,0 +1,88 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-size: 1.6rem;
+    /* font-family: "Sen", sans-serif; */
+    font-family: "Poppins", sans-serif;
+}
+
+/*! COMMON */
+.sen {
+    font-family: "Sen", sans-serif;
+}
+
+.content {
+    min-width: 1170px;
+    max-width: calc(100% - 48px);
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/*! HERO */
+#hero {
+    height: 100vh;
+    background: red;
+}
+
+.hero-wrap {
+}
+
+/*! COURSES */
+#courses {
+    height: 645px;
+    background: red;
+}
+
+.courses-wrap {
+}
+
+/*! TESTI */
+#testi {
+    height: 380px;
+    background: red;
+}
+
+.testi-wrap {
+}
+
+/*! FEATURES */
+#features {
+    height: 438px;
+    background: red;
+}
+
+.features-wrap {
+}
+
+/*! CTA */
+#cta {
+    height: 440px;
+    background: #999;
+}
+
+.cta-wrap {
+}
+
+/*! BLOG */
+#blog {
+    height: 878px;
+    background: #ccc;
+}
+
+.blog-wrap {
+}
+
+/*! FOOTER */
+#footer {
+    height: 428px;
+    background: #666;
+}
+
+.footer-wrap {
+}
