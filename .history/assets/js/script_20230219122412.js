@@ -54,7 +54,7 @@ navItems[3].addEventListener("click", function (e) {
     window.scroll(0, 2140);
 });
 navItems[4].addEventListener("click", function (e) {
-    window.scroll(0, 3650.4);
+    window.scroll(0, 3880);
 });
 
 function handleNavItemEnter(e) {

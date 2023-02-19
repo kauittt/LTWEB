@@ -77,21 +77,22 @@ h2 {
 }
 
 .wrapper {
+    padding: 10px calc((100% - 1170px) / 2);
 }
 
-.nav {
+.header-nav {
     z-index: 2;
     width: 100%;
     position: relative;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 10px calc((100% - 1170px) / 2);
-    transition: all 0.35s ease;
+    padding: 10px 0;
+    transition: all 0.4s ease;
     background: var(--bg-color);
 }
 
-.nav.stick {
+.header-nav.stick {
     position: fixed;
     top: 0;
     left: 0;
@@ -99,12 +100,12 @@ h2 {
     box-shadow: rgb(100 100 111 / 20%) 0px 7px 29px 0px;
 }
 
-.nav-list {
+.header-nav-list {
     position: relative;
     display: flex;
 }
 
-.nav-list__item {
+.header-nav-list__item {
     padding: 6px 21px;
     font-weight: 400;
     font-size: 1.6rem;
@@ -112,7 +113,7 @@ h2 {
     color: var(--text-normal);
 }
 
-.nav-list__item--effect {
+.header-nav-list__item--effect {
     position: absolute;
     bottom: 5px;
     height: 3px;
@@ -122,34 +123,34 @@ h2 {
     transition: all 0.2s linear;
 }
 
-.nav-list__item--selected {
+.header-nav-list__item--selected {
     color: var(--text-bold);
     font-weight: 600;
 }
 
-.nav-btn {
+.header-nav-btn {
 }
 
-.nav-btn__login,
-.nav-btn__signup {
+.header-nav-btn__login,
+.header-nav-btn__signup {
     padding: 12px 27px;
     font-size: 1.6rem;
     transition: all 0.15s linear;
 }
 
-.nav-btn__login:hover {
+.header-nav-btn__login:hover {
     font-weight: 600;
     background: rgba(23, 17, 0, 0.85);
 }
 
-.nav-btn__signup {
+.header-nav-btn__signup {
     margin-left: 5px;
     background-color: white;
     color: black;
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
 
-.nav-btn__signup:hover {
+.header-nav-btn__signup:hover {
     font-weight: 600;
 }
 
@@ -354,7 +355,7 @@ h2 {
     color: var(--text-normal);
 
     margin-top: 16px;
-    margin-bottom: 40px;
+    margin-bottom: 55px;
 }
 
 .courses-header-desc-icon {

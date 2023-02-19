@@ -87,7 +87,7 @@ h2 {
     align-items: center;
     justify-content: space-between;
     padding: 10px calc((100% - 1170px) / 2);
-    transition: all 0.35s ease;
+    transition: all 0.3s ease;
     background: var(--bg-color);
 }
 
@@ -354,7 +354,7 @@ h2 {
     color: var(--text-normal);
 
     margin-top: 16px;
-    margin-bottom: 40px;
+    margin-bottom: 55px;
 }
 
 .courses-header-desc-icon {

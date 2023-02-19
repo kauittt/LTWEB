@@ -45,16 +45,16 @@ navItems[0].addEventListener("click", function (e) {
     window.scroll(0, 0);
 });
 navItems[1].addEventListener("click", function (e) {
-    window.scroll(0, 850.4);
+    window.scroll(0, 1070);
 });
 navItems[2].addEventListener("click", function (e) {
-    window.scroll(0, 1580);
+    window.scroll(0, 1800);
 });
 navItems[3].addEventListener("click", function (e) {
-    window.scroll(0, 2140);
+    window.scroll(0, 2340);
 });
 navItems[4].addEventListener("click", function (e) {
-    window.scroll(0, 3650.4);
+    window.scroll(0, 3880);
 });
 
 function handleNavItemEnter(e) {
