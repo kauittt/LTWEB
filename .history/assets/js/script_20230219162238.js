@@ -44,6 +44,7 @@ function handleWindowScroll(e) {
     item.addEventListener("mouseleave", handleNavItemLeave);
     item.addEventListener("click", handleNavScroll);
 });
+
 function handleNavScroll(e) {
     const index = e.target.dataset.index;
     const { top } = containerItems[index].getBoundingClientRect();

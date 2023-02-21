@@ -25,12 +25,13 @@ function debounceFn(func, wait, immediate) {
         if (callNow) func.apply(context, args);
     };
 }
-
 window.addEventListener("scroll", debounceFn(handleWindowScroll, 15));
+// window.addEventListener("scroll", handleWindowScroll);
+
 function handleWindowScroll(e) {
     if (window.pageYOffset >= nav.offsetHeight) {
         nav.classList.add("stick");
-        header.style.marginTop = `${nav.offsetHeight}px`;
+        header.style.marginTop = `${nav.offsetHeight + nav.style.paddingTop}px`;
     } else {
         nav.classList.remove("stick");
         header.style.marginTop = `0px`;
@@ -44,11 +45,13 @@ function handleWindowScroll(e) {
     item.addEventListener("mouseleave", handleNavItemLeave);
     item.addEventListener("click", handleNavScroll);
 });
+
 function handleNavScroll(e) {
     const index = e.target.dataset.index;
     const { top } = containerItems[index].getBoundingClientRect();
     window.scrollTo(0, arrTop[index] - 60);
 }
+
 function handleNavItemEnter(e) {
     const { width } = e.target.getBoundingClientRect();
     navHover.style.width = `${width - 24}px`;

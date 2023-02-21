@@ -1,3 +1,5 @@
+const ZingMp3 = require("zingmp3-api/modules/ZingMp3");
+
 const navItems = document.querySelectorAll(".nav-list__item");
 const navHover = document.querySelector(".nav-list__item--effect");
 const nav = document.querySelector(".nav");
@@ -58,4 +60,9 @@ function handleNavItemEnter(e) {
 function handleNavItemLeave(e) {
     navHover.style.width = `${0}px`;
     e.target.classList.remove("nav-list__item--selected");
+}
+
+const mp3 = new ZingMp3();
+async function testMp3() {
+    const response = await ZingMp3.getDetailPlaylist("ZWZB96C8");
 }

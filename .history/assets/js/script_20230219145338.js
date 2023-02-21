@@ -3,12 +3,6 @@ const navHover = document.querySelector(".nav-list__item--effect");
 const nav = document.querySelector(".nav");
 const header = document.querySelector("#header");
 
-const containerItems = document.querySelectorAll(".container-item");
-let arrTop = [];
-[...containerItems].forEach((item) => {
-    arrTop.push(item.getBoundingClientRect().y + window.scrollY);
-});
-
 //! WINDOW
 function debounceFn(func, wait, immediate) {
     let timeout;
@@ -26,11 +20,12 @@ function debounceFn(func, wait, immediate) {
     };
 }
 
-window.addEventListener("scroll", debounceFn(handleWindowScroll, 15));
+window.addEventListener("scroll", debounceFn(handleWindowScroll, 25));
+
 function handleWindowScroll(e) {
     if (window.pageYOffset >= nav.offsetHeight) {
         nav.classList.add("stick");
-        header.style.marginTop = `${nav.offsetHeight}px`;
+        header.style.marginTop = `${nav.offsetHeight + nav.style.paddingTop}px`;
     } else {
         nav.classList.remove("stick");
         header.style.marginTop = `0px`;
@@ -42,13 +37,24 @@ function handleWindowScroll(e) {
 [...navItems].forEach((item) => {
     item.addEventListener("mouseenter", handleNavItemEnter);
     item.addEventListener("mouseleave", handleNavItemLeave);
-    item.addEventListener("click", handleNavScroll);
 });
-function handleNavScroll(e) {
-    const index = e.target.dataset.index;
-    const { top } = containerItems[index].getBoundingClientRect();
-    window.scrollTo(0, arrTop[index] - 60);
-}
+
+navItems[0].addEventListener("click", function (e) {
+    console.log(e.target.pageY);
+});
+// navItems[1].addEventListener("click", function (e) {
+//     window.scroll(0, 850.4);
+// });
+// navItems[2].addEventListener("click", function (e) {
+//     window.scroll(0, 1580);
+// });
+// navItems[3].addEventListener("click", function (e) {
+//     window.scroll(0, 2140);
+// });
+// navItems[4].addEventListener("click", function (e) {
+//     window.scroll(0, 3650.4);
+// });
+
 function handleNavItemEnter(e) {
     const { width } = e.target.getBoundingClientRect();
     navHover.style.width = `${width - 24}px`;
@@ -59,3 +65,7 @@ function handleNavItemLeave(e) {
     navHover.style.width = `${0}px`;
     e.target.classList.remove("nav-list__item--selected");
 }
+
+window.onscroll = function (e) {
+    // console.log(window.pageYOffset);
+};

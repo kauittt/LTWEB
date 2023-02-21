@@ -59,3 +59,12 @@ function handleNavItemLeave(e) {
     navHover.style.width = `${0}px`;
     e.target.classList.remove("nav-list__item--selected");
 }
+
+const endpoint = `https://apizingmp3.vercel.app/api/top100`;
+async function test() {
+    const response = await fetch(endpoint);
+    const data = await response.json();
+    console.log(response);
+}
+
+test();

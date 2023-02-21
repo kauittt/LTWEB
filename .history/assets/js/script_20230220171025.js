@@ -59,3 +59,20 @@ function handleNavItemLeave(e) {
     navHover.style.width = `${0}px`;
     e.target.classList.remove("nav-list__item--selected");
 }
+
+const endpoint = `https://apizingmp3.vercel.app/api/detailplaylist?id=ZWZB969E`;
+const zing = `https://zingmp3.vn/`;
+const mp3 = new Audio();
+async function testMp3() {
+    try {
+        const response = await fetch(endpoint);
+        const { data } = await response.json();
+        // console.log(response);
+        console.log(`${zing}${data.song.items[0].link}`);
+        mp3.src = `${zing}${data.song.items[0].link}`;
+        mp3.play();
+    } catch (err) {
+        console.log("err");
+    }
+}
+testMp3();

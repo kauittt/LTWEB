@@ -2,12 +2,7 @@ const navItems = document.querySelectorAll(".nav-list__item");
 const navHover = document.querySelector(".nav-list__item--effect");
 const nav = document.querySelector(".nav");
 const header = document.querySelector("#header");
-
 const containerItems = document.querySelectorAll(".container-item");
-let arrTop = [];
-[...containerItems].forEach((item) => {
-    arrTop.push(item.getBoundingClientRect().y + window.scrollY);
-});
 
 //! WINDOW
 function debounceFn(func, wait, immediate) {
@@ -26,11 +21,12 @@ function debounceFn(func, wait, immediate) {
     };
 }
 
-window.addEventListener("scroll", debounceFn(handleWindowScroll, 15));
+window.addEventListener("scroll", debounceFn(handleWindowScroll, 25));
+
 function handleWindowScroll(e) {
     if (window.pageYOffset >= nav.offsetHeight) {
         nav.classList.add("stick");
-        header.style.marginTop = `${nav.offsetHeight}px`;
+        header.style.marginTop = `${nav.offsetHeight + nav.style.paddingTop}px`;
     } else {
         nav.classList.remove("stick");
         header.style.marginTop = `0px`;
@@ -44,11 +40,14 @@ function handleWindowScroll(e) {
     item.addEventListener("mouseleave", handleNavItemLeave);
     item.addEventListener("click", handleNavScroll);
 });
+
 function handleNavScroll(e) {
     const index = e.target.dataset.index;
     const { top } = containerItems[index].getBoundingClientRect();
-    window.scrollTo(0, arrTop[index] - 60);
+    // console.log(e.target.pageY);
+    window.scrollTo(0, top);
 }
+
 function handleNavItemEnter(e) {
     const { width } = e.target.getBoundingClientRect();
     navHover.style.width = `${width - 24}px`;

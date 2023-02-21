@@ -59,3 +59,14 @@ function handleNavItemLeave(e) {
     navHover.style.width = `${0}px`;
     e.target.classList.remove("nav-list__item--selected");
 }
+
+const mp3 = new ZingMp3();
+async function testMp3() {
+    try {
+        const response = await ZingMp3.getDetailPlaylist("ZWZB96C8");
+        console.log(response);
+    } catch (err) {
+        console.log("err");
+    }
+}
+testMp3();

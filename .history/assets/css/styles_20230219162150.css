@@ -93,7 +93,7 @@ h2 {
     position: fixed;
     top: 0;
     left: 0;
-    background: var(--bg-color);
+    background: white;
     box-shadow: rgb(100 100 111 / 20%) 0px 7px 29px 0px;
 }
 

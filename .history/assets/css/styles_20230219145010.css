@@ -93,7 +93,7 @@ h2 {
     position: fixed;
     top: 0;
     left: 0;
-    background: var(--bg-color);
+    background: white;
     box-shadow: rgb(100 100 111 / 20%) 0px 7px 29px 0px;
 }
 
@@ -320,8 +320,9 @@ h2 {
 /*! COURSES */
 #courses {
     height: 645px;
-    margin-top: 200px;
+    margin-top: 100px;
     margin-bottom: 200px;
+    padding-top: 100px;
 }
 
 .courses-wrap {
@@ -447,7 +448,7 @@ h2 {
     height: 380px;
     background: var(--bg-brown);
     color: #fff;
-    padding: 50px;
+    background: red;
 }
 
 .testi-wrap {
@@ -514,6 +515,7 @@ h2 {
     height: 438px;
     margin-bottom: 200px;
     margin-top: 200px;
+    background-color: red;
 }
 
 .features-wrap {
@@ -617,6 +619,7 @@ h2 {
 #blog {
     height: 878px;
     background: var(--bg-color);
+    background: red;
 }
 
 .blog-wrap {
@@ -627,7 +630,7 @@ h2 {
 }
 
 .blog-header__heading {
-    margin-top: 1 0px;
+    margin-top: 96px;
     font-weight: 700;
     font-size: 3.8rem;
     line-height: 1.26;
